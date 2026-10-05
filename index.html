@@ -1,13 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Machine Learning Workshop</title>
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/png" href="/images/favicon.png" />
-  </head>
-  <body>
-<img src="demoart28.png" alt="demo demoart28" width="500" height="500">
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maya Prado | Portfolio</title>
+
+  <!-- Google Fonts: Comfortaa & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Favicon: Whimsical Flower SVG -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>" />
+</head>
+<body>
+
+  <!-- Floating Cursor Aura (Desktop Only) -->
+  <div id="cursor-aura"></div>
+
+  <!-- Drifting Pastel Flower Petals Background Canvas -->
+  <canvas id="petal-canvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <a href="#hero" class="nav-brand">
+        <span class="brand-flower">✿</span>
+        <span>Maya Prado</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Portfolio</a></li>
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="#contact" class="nav-cta">Say Hello</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          <span>Digital Artist & Creative Designer</span>
+        </div>
+
+        <h1>
+          Hello, I'm <br />
+          <span class="hero-highlight">Maya Prado</span> ✿
+        </h1>
+
+        <p>
+          Welcome to my digital corner. I create whimsical illustrations, exploring soft pastel harmonies, botanical forms, and playful visual storytelling.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#work" class="btn-primary">
+            <span>Explore My Work</span>
+            <span>✿</span>
+          </a>
+          <a href="#contact" class="btn-secondary">
+            <span>Get in Touch</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Art Highlight Frame -->
+      <div class="hero-art-frame">
+        <div class="hero-art-backdrop"></div>
+        <div class="hero-art-card">
+          <img src="demoart28.png" alt="Featured artwork by Maya Prado" />
+          <div class="hero-art-caption">
+            <span>Featured Artwork</span>
+            <small>Adobe Illustrator</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Capabilities Ribbon -->
+    <section class="ribbon">
+      <div class="ribbon-item">
+        <span class="ribbon-icon">🌸</span>
+        <h3>01. Vector Illustration</h3>
+        <p>Designing delicate silhouettes, crisp vector geometry, and organic botanical compositions.</p>
+      </div>
+
+      <div class="ribbon-item">
+        <span class="ribbon-icon">🎨</span>
+        <h3>02. Pastel Harmonies</h3>
+        <p>Curating gentle palettes of blush rose, lavender mist, and meadow sage for calm, whimsical aesthetics.</p>
+      </div>
+
+      <div class="ribbon-item">
+        <span class="ribbon-icon">✨</span>
+        <h3>03. Visual Storytelling</h3>
+        <p>Blending sweet florals with intriguing contrasts to craft imaginative, memorable character scenes.</p>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="work">
+      <div class="section-head">
+        <span class="section-tag">✿ Portfolio Showcase ✿</span>
+        <h2>Featured Work</h2>
+        <p>A closer look into my creative illustrations, design craft, and visual exploration.</p>
+      </div>
+
+      <!-- Featured Piece Spotlight -->
+      <div class="portfolio-spotlight">
+        <!-- Interactive Artwork Frame -->
+        <div class="art-display-frame" id="open-artwork-modal" title="Click to view fullscreen">
+          <img src="demoart28.png" alt="Flora and Playful Silhouettes by Maya Prado" />
+          <div class="art-zoom-overlay">
+            <span>Click to Zoom</span>
+            <span>🔍</span>
+          </div>
+        </div>
+
+        <!-- Metadata & Narrative -->
+        <div class="artwork-meta">
+          <div class="art-tag-row">
+            <span class="badge-pastel">2D Vector Art</span>
+            <span class="badge-pastel sage">Adobe Illustrator</span>
+            <span class="badge-pastel lilac">Original Piece</span>
+          </div>
+
+          <h3>Whimsical Flora & Silhouettes</h3>
+
+          <p class="art-story">
+            An illustrative study combining whimsical flora and playful silhouettes. Soft lavender blooms with heart-shaped centers interlock alongside an expressive sage green bunny and curious character figures, balanced by dynamic shadow forms that add depth and personality to the composition.
+          </p>
+
+          <!-- Color Palette extracted from artwork -->
+          <div class="art-palette-box">
+            <span>Extracted Color Palette</span>
+            <div class="swatches-list">
+              <div class="swatch" title="Lavender Peony">
+                <span class="swatch-color" style="background-color: #c985ce;"></span>
+                <span>#C985CE</span>
+              </div>
+              <div class="swatch" title="Meadow Sage">
+                <span class="swatch-color" style="background-color: #8fad63;"></span>
+                <span>#8FAD63</span>
+              </div>
+              <div class="swatch" title="Soft Vanilla">
+                <span class="swatch-color" style="background-color: #fdfbf7;"></span>
+                <span>#FDFBF7</span>
+              </div>
+              <div class="swatch" title="Midnight Velvet">
+                <span class="swatch-color" style="background-color: #231f20;"></span>
+                <span>#231F20</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sprouting Next Works Card -->
+      <div class="coming-soon-card">
+        <div class="coming-soon-text">
+          <h4>More Creations Blooming Soon 🌱</h4>
+          <p>
+            Currently developing fresh series in digital illustration, graphic branding, and creative experiments. Stay tuned as new works blossom here!
+          </p>
+        </div>
+        <div class="sprout-icon">🌸</div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="about-card">
+        <div class="about-bio">
+          <span class="section-tag">✿ About Maya ✿</span>
+          <h3>Creating with Curiosity & Playfulness</h3>
+          <p>
+            Hi! I'm <strong>Maya Prado</strong>, a digital artist and designer. My work centers on creating whimsical, inviting visual worlds where gentle colors and expressive illustrations evoke warmth and imagination.
+          </p>
+          <p>
+            Whether experimenting with clean vector outlines or exploring nature-inspired botanical motifs, I love finding harmony between playful charm and thoughtful design.
+          </p>
+
+          <div class="skills-pill-group">
+            <span class="skill-pill">🌸 Illustrator</span>
+            <span class="skill-pill">🎨 Color Theory</span>
+            <span class="skill-pill">🍃 Botanical Art</span>
+            <span class="skill-pill">✨ Visual Identity</span>
+            <span class="skill-pill">💻 Web Design</span>
+          </div>
+        </div>
+
+        <div class="about-quote-box" id="vision">
+          <blockquote>
+            “Design is a gentle garden where curiosity blooms and simple forms become unforgettable stories.”
+          </blockquote>
+          <cite>— Maya Prado</cite>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="contact-box">
+        <div class="contact-info">
+          <span class="section-tag">✿ Let's Connect ✿</span>
+          <h3>Get in Touch</h3>
+          <p>
+            Have a question, collaboration idea, or simply want to chat about art and design? I would love to hear from you!
+          </p>
+
+          <div class="email-highlight-card">
+            <span class="email-label">Direct Email</span>
+            <a href="mailto:mayaezprado@gmail.com" class="email-address">
+              <span>mayaezprado@gmail.com</span>
+              <span>✉️</span>
+            </a>
+            <button type="button" class="copy-btn" id="copy-email-btn">Copy Email Address 🌸</button>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form class="contact-form" id="contact-form">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="Maya Angelou" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="hello@example.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" class="form-control" placeholder="Share your message or project ideas here..." required></textarea>
+          </div>
+
+          <button type="submit" class="form-submit-btn">Send Message ✿</button>
+          <p class="form-status" id="form-status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox Modal for Full View -->
+  <div class="modal" id="artwork-modal">
+    <div class="modal-content">
+      <button class="modal-close" id="close-modal" aria-label="Close modal">&times;</button>
+      <div class="modal-img-container">
+        <img src="demoart28.png" alt="Whimsical Flora & Silhouettes - Full View" />
+      </div>
+      <div class="modal-details">
+        <h3>Whimsical Flora & Silhouettes</h3>
+        <p>Vector illustration crafted in Adobe Illustrator by Maya Prado. Click outside or press ESC to return.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span>✿ Maya Prado</span>
+      </div>
+      <div class="footer-copy">
+        © 2026 Maya Prado. Handcrafted with whimsical pastel florals.
+      </div>
+      <a href="#hero" class="back-to-top" title="Back to top" aria-label="Back to top">
+        ↑
+      </a>
+    </div>
+  </footer>
+
+  <!-- Interactive Scripts -->
+  <script src="script.js"></script>
+</body>
 </html>
