@@ -288,7 +288,7 @@
 
               id="feltFlagViewer"
 
-              src="./feltflag1116.glb"
+              src="feltflag1116.glb"
 
               alt="Interactive 3D felt flag artwork"
 
@@ -387,34 +387,6 @@
       <a href="#top">BACK TO TOP ↑</a>
 
     </footer>
-
-  </div>
-
-  <!-- 3D MODEL LOADING STATUS -->
-
-  <script>
-
-    const viewer = document.getElementById("feltFlagViewer");
-
-    const status = document.getElementById("modelStatus");
-
-    viewer.addEventListener("load", () => {
-
-      status.innerHTML = '<span class="status-dot"></span> LIVE';
-
-      status.classList.add("model-loaded");
-
-    });
-
-    viewer.addEventListener("error", () => {
-
-      status.innerHTML = '<span class="status-dot"></span> MODEL ERROR';
-
-      status.classList.add("model-error");
-
-    });
-
-  </script>
 
 </body>
 
